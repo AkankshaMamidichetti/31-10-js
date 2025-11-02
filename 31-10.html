@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     function test() {
+    //         var x = 10;
+    //         if (true) {
+    //             var x = 20;
+    //             console.log(x);
+    //         }
+    //         console.log(x);
+    //     }
+    //     test();
+    //   output: 20 20    because x value reassign
+    // -------------------------------------------------------------------------------
+    // function example() {
+    //         let y = 5;
+    //         if (true) {
+    //             let y = 10;
+    //             console.log(y);
+    //         }
+    //         console.log(y);
+    //         }
+    //         example();
+    //    output: 10   5
+    // --------------------------------------------------------------------------
+    // function run() {
+    //     if (true) {
+    //         var a = 100;
+    //         let b = 200;
+    //         const c = 300;
+    //     }
+    //     console.log(a);
+    //     console.log(typeof b);
+    //     }
+    //     run();
+    //     output:
+    //     100
+    //     undefined
+    // -----------------------------------------------------------------------------
+//     var x = 1;
+// function outer() {
+//         console.log(x);
+//         var x = 2;
+//         }
+//         outer();
+//         output: undefined
+// ----------------------------------------------------------------------------------------
+// let x = 10;
+// {
+//   let x = 20;
+//   {
+//     let x = 30;
+//     console.log(x);
+//   }
+//   console.log(x);
+// }
+// console.log(x);
+// output: 30   20  10
+// ------------------------------------------------------------------------------------------
+// {
+//   var a = 1;
+//   let b = 2;
+//   const c = 3;
+// }
+// console.log(a);
+// console.log(typeof b);
+// console.log(typeof c);
+// output:
+// 1
+// undefined
+// undefined
+// -----------------------------------------------------------------------------------------------
+// for (var i = 0; i < 3; i++) {}
+// console.log(i);
+
+// for (let j = 0; j < 3; j++) {}
+// console.log(typeof j);
+// output:
+// 3
+// undefined
+// ----------------------------------------------------------------------------------------------
+// function demo() {
+//   console.log(a);
+//   var a = 50;
+//   console.log(a);
+// }
+// demo();
+// output:
+// undefined
+// 50
+// -----------------------------------------------------------------------------------------------
+// function blockTest() {
+//   const value = 5;
+//   if (true) {
+//     const value = 10;
+//     console.log(value);
+//   }
+//   console.log(value);
+// }
+// blockTest();
+// output:
+// 10
+// 5
+// ------------------------------------------------------------------------------------------------
+// function testScope() {
+//   if (true) {
+//     var x = "var inside";
+//     let y = "let inside";
+//   }
+//   console.log(x);
+//   console.log(typeof y);
+// }
+// testScope();
+// output:
+// "var inside"
+// unfefined
+// --------------------------------------------------------------------------------------------------
+// Write a program that checks a student's marks and prints:
+// "Grade A" if marks > 80
+// "Grade B" if marks between 60–80
+// "Grade C" if marks between 40–60
+// marks=30
+// if (marks> 80){
+//     console.log( " Grade A")
+// }
+// else if (marks >=60 && marks<=80){
+//     console.log( " Grade B")
+// }
+// else if (marks >=40 && marks<=60){
+//     console.log( " Grade C")
+// }
+// else{
+//     console.log( " Fail")
+// }
+// output: fail
+// ---------------------------------------------------------------------------------------------
+// Use a switch case to print the day name when given a number (1–7).
+// switch ('5'){
+//     case '1':
+//         console.log("monday")
+//         break;
+//      case '2':
+//         console.log("tuesday")
+//         break;
+//      case '3':
+//         console.log("wednesday")
+//         break;
+//      case '4':
+//         console.log("thursday")
+//         break;
+//      case '5':
+//         console.log("friday")
+//         break;
+//      case '6':
+//         console.log("saturday")
+//         break;
+//      case '7':
+//         console.log("sunday")
+//         break;
+// }
+// output: friday
+// --------------------------------------------------------------------------------
+// Create a simple calculator using switch case (add, sub, mul, div).
+// num1=10
+// num2=15
+// operator='+'  
+//                 //  the value can be changed
+// switch (operator){
+//     case '+':
+//         console.log(num1+num2)
+//         break;
+//     case '-':
+//         console.log(num1-num2)
+//         break;
+//     case '*':
+//         console.log(num1*num2)
+//         break;
+//     case '%':
+//         console.log(num1%num2)
+//         break;
+// }
+// output:
+// 25           we gave operatator value + so addition operation perform between num1 and num2
+// -------------------------------------------------------------------------------------------------
+// Using if...else if, check a person’s age group:
+// below 13 → "Child"
+// 13–19 → "Teen"
+// 20–59 → "Adult"
+// 60+ → "Senior"
+// age=12
+// if (age>= 60){
+//     console.log( "Senior")
+// }
+// else if (age >=20 && age<=59){
+//     console.log( "Adult")
+// }
+// else if (age >=13 && age<=19){
+//     console.log( "teen")
+// }
+// else{
+//     console.log( "Child")
+// }
+// output: child
+// -------------------------------------------------------------------------------------------------
+// Use switch to print a message for traffic light colors (red → stop, yellow → wait, green → go).
+// signal="red"
+// switch (signal){
+//     case "red":
+//         console.log("stop")
+//         break;
+//     case 'Yellow':
+//         console.log("Wait")
+//         break;
+//     case "green":
+//         console.log("go")
+//         break;
+   
+//     }
+// output: stop
+// --------------------------------------------------------------------------------------------------------
+// let a = 0;
+// if (a) console.log("Truthy");
+// else console.log("Falsy");
+// output: falsy
+// -----------------------------------------------------------------------------
+// let value = null ?? "default";
+// console.log(value);
+// output:default
+// ------------------------------------------------------------------------------
+// let x;
+// let y = x ?? 10;
+// console.log(y);
+
+// output:10
+// --------------------------------------------------------------------------------
+// let name = "";
+// console.log(name || "Guest");
+// console.log(name ?? "Guest");
+// output: guest
+// -------------------------------------------------------------------------------
+// let n = NaN;
+// if (n) console.log("True");
+// else console.log("False");
+// output: false
+// -----------------------------------------------------------------------------------
+// let choice = 2;
+// switch (choice) {
+//   case 1:
+//     console.log("One");
+//   case 2:
+//     console.log("Two");
+//   case 3:
+//     console.log("Three");
+//     break;
+//   default:
+//     console.log("Other");
+// }
+// output: 
+// two 
+// three             both case 2 and case 3 will execute because no break statement is given for case 2
+// -----------------------------------------------------------------------------------------------------------
+// let userInput = undefined;
+// let result = userInput ?? "No Value";
+// console.log(result);
+// output: no value
+// -------------------------------------------------------------------------------------------------------------
+// let num = "5";
+// if (num == 5) console.log("== works");
+// if (num === 5) console.log("=== works");
+// output: ==work               because it checks the value not the type
+// ------------------------------------------------------------------------------------------------------------------
+// let test = 0 || "fallback";
+// let check = 0 ?? "fallback";
+// console.log(test, check);
+// output:fallback 0
+// --------------------------------------------------------------------------------------------------------------
+// let score = null;
+// if (score ?? 0 > 50) console.log("Passed");
+// else console.log("Failed");
+
+// output: failed
+    </script>
+</body>
+
+</html>
